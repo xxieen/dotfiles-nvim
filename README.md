@@ -1,4 +1,5 @@
 # Neovim configuration for CPP
 
-Include **neovide** configuration
-Anyone can use it :>
+## Include **neovide** configuration
+
+## Anyone can use it :>
