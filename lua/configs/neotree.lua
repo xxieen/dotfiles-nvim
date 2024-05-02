@@ -19,7 +19,7 @@ local opts = {
           local path = node:get_id()
           vim.fn.setreg("+", path, "c")
         end,
-        desc = "Copy Path to Clipboard",
+        desc = "Neotree Copy Path to Clipboard",
       },
     },
   },

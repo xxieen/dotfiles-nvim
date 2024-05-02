@@ -1,21 +1,10 @@
 return {
-
-  { "nvim-tree/nvim-web-devicons", lazy = true },
-  { "MunifTanjim/nui.nvim", lazy = true },
   {
     "hrsh7th/nvim-cmp",
     event = "InsertEnter",
     opts = {
       completion = {
         completeopt = "menu,menuone,noselect,preview",
-      },
-
-      formatting = {
-        format = function(_, vim_item)
-          --vim_item.menu = ""
-          --vim_item.kind = ""
-          return vim_item
-        end,
       },
     },
   },
@@ -75,52 +64,6 @@ return {
         "prettier",
         "pyright",
         "clangd",
-      },
-    },
-  },
-
-  {
-    "nvim-treesitter/nvim-treesitter",
-    dependencies = {
-      "windwp/nvim-ts-autotag",
-    },
-    -- enable autotagging (w/ nvim-ts-autotag plugin)
-    autotag = {
-      enable = true,
-    },
-    incremental_selection = {
-      enable = true,
-      keymaps = {
-        init_selection = "<C-space>",
-        node_incremental = "<C-space>",
-        scope_incremental = false,
-        node_decremental = "<bs>",
-      },
-    },
-    opts = {
-      ensure_installed = {
-        "vim",
-        "lua",
-        "vimdoc",
-        "html",
-        "css",
-        "cpp",
-        "c",
-        "markdown",
-        "json",
-        "javascript",
-        "typescript",
-        "tsx",
-        "yaml",
-        "regex",
-        "markdown_inline",
-        "bash",
-        "dockerfile",
-        "gitignore",
-        "query",
-        "c",
-        "cpp",
-        "cmake",
       },
     },
   },
