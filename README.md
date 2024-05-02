@@ -2,4 +2,6 @@
 
 ## Include **neovide** configuration
 
-## Anyone can use it :>
+## Based on NvChad
+
+Anyone can use it :>
