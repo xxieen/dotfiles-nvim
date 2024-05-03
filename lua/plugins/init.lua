@@ -1,4 +1,12 @@
 return {
+
+  -- {
+  --   "Pocco81/TrueZen.nvim",
+  --   cmd = { "TZAtaraxis", "TZMinimalist" },
+  --   config = function()
+  --     require "custom.configs.truezen" -- just an example path
+  --   end,
+  -- },
   {
     "hrsh7th/nvim-cmp",
     event = "InsertEnter",
