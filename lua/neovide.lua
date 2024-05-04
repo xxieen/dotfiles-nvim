@@ -16,8 +16,8 @@ if vim.g.neovide then
   vim.g.neovide_padding_right = 0
   vim.g.neovide_padding_left = 0
   -- g:neovide_transparency should be 0 if you want to unify transparency of content and title bar.
-  vim.g.neovide_transparency = 1
-  --vim.g.neovide_window_blurred = true
+  vim.g.neovide_transparency = 0.7
+  vim.g.neovide_window_blurred = true
   vim.g.neovide_floating_blur_amount_x = 2.0
   vim.g.neovide_floating_blur_amount_y = 2.0
   -- floating shadow
@@ -33,7 +33,7 @@ if vim.g.neovide then
   --theme
   -- vim.g.neovide_theme = "auto"
   --cursor
-  vim.g.neovide_cursor_animation_length = 0.08
+  vim.g.neovide_cursor_animation_length = 0.1
   vim.g.neovide_cursor_trail_size = 0.5
   vim.g.neovide_cursor_vfx_mode = "railgun"
   vim.g.neovide_cursor_vfx_particle_lifetime = 3
