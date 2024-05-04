@@ -1,5 +1,7 @@
 require "nvchad.options"
 
+-- snippets
+vim.g.lua_snippets_path = vim.fn.stdpath "config" .. "/lua/snippets"
 -- add yours here!
 vim.cmd "let g:netrw_liststyle = 3"
 
