@@ -9,20 +9,33 @@ map("i", "jk", "<ESC>")
 -- neotree
 map("n", "<C-n>", "<cmd>Neotree toggle=true reveal=true<CR>", { desc = "nvimtree toggle window" })
 map("n", "<leader>e", "<cmd>Neotree toggle=true reveal=true<CR>", { desc = "nvimtree toggle window" })
--- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
+-- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>"
 
 --terminal
-map({ "n" }, "<leader>i", function()
-  require("nvchad.term").toggle { pos = "float", id = "floatTerm" }
-end, { desc = "terminal toggle floating term" })
-map({ "n" }, "<leader>v", function()
-  require("nvchad.term").toggle { pos = "vsp", id = "vtoggleTerm" }
-end, { desc = "terminal toggleable vertical term" })
 
-map({ "n" }, "<leader>h", function()
-  require("nvchad.term").toggle { pos = "sp", id = "htoggleTerm" }
-end, { desc = "terminal new horizontal term" })
+map({ "n", "t" }, "<A-i>", function()
+  require("nvchad.term").toggle { pos = "float", id = "floatTerm" }
+end, { desc = "Terminal Toggle Floating term" })
+
+-- map({ "n", "t" }, "<F5>", function()
+--   require("nvchad.term").runner {
+--     id = "floatTerm",
+--     pos = "float",
+--
+--     cmd = function()
+--       local file = vim.fn.expand "%"
+--
+--       local ft_cmds = {
+--         python = "python3 " .. file,
+--         cpp = "clear && g++ -o out " .. file .. " && ./out",
+--       }
+--
+--       return ft_cmds[vim.bo.ft]
+--     end,
+--   }
+-- end, { desc = "Terminal " })
 --buffer
+
 map("n", "<S-l>", function()
   require("nvchad.tabufline").next()
 end, { desc = "buffer goto next" })
@@ -37,13 +50,12 @@ end, { desc = "buffer close" })
 
 -- Disable mappings
 local nomap = vim.keymap.del
-
 nomap("n", "<tab>")
 nomap("n", "<S-tab>")
-
--- Trouble
-map("n", "<leader>tn", ":tabn<cr>", { desc = "Tab Next " })
-map("n", "<leader>tp", ":tabp<cr>", { desc = "Tab Prev " })
-map("n", "<leader>tx", ":tabc<cr>", { desc = "Tab Close " })
+nomap("n", "<leader>rn")
+-- Tab
+map("n", "<leader>tn", ":tabn<CR>", { desc = "Tab Next " })
+map("n", "<leader>tp", ":tabp<CR>", { desc = "Tab Prev " })
+map("n", "<leader>tx", ":tabc<CR>", { desc = "Tab Close " })
 -- telescope
-map("n", "<leader>ft", "<cmd>TodoTelescope<cr>", { desc = "telescope Find todos" })
+map("n", "<leader>ft", "<cmd>TodoTelescope<CR>", { desc = "telescope Find todos" })

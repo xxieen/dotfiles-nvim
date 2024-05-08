@@ -43,12 +43,17 @@ M.ui = {
     -- Operator = { italic = true },
   },
   statusline = {
-    theme = "default", -- default/vscode/vscode_colored/minimal
+    theme = "vscode_colored", -- default/vscode/vscode_colored/minimal
     -- default/round/block/arrow separators work only for default statusline theme
     -- round and block will work for minimal theme only
     separator_style = "default",
     order = nil,
     modules = nil,
+    -- modules = {
+    --   Breadcrumbs = function()
+    --     return require("lspsaga.symbol.winbar").get_bar()
+    --   end,
+    -- },
   },
   -- lazyload it when there are 1+ buffers
   tabufline = {
@@ -97,9 +102,31 @@ M.ui = {
     },
     cheatsheet = {
       theme = "grid", -- simple/grid
-      excluded_groups = { "terminal (t)", "autopairs", "Nvim" }, -- can add group name or with mode
+      --      excluded_groups = { "terminal (t)", "autopairs", "Nvim" }, -- can add group name or with mode
+    },
+
+    lsp = { signature = true },
+
+    term = {
+      hl = "Normal:term,WinSeparator:WinSeparator",
+      sizes = { sp = 0.3, vsp = 0.2 },
+      float = {
+        relative = "editor",
+        row = 0.7,
+        col = 0.55,
+        width = 0.7,
+        height = 0.6,
+        border = "single",
+      },
     },
   },
 }
-
+M.base46 = {
+  integrations = {
+    "trouble",
+    "vim-illuminate",
+    "lspsaga",
+    "rainbowdelimiters",
+  },
+}
 return M

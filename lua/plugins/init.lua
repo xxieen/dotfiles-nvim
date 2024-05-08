@@ -8,6 +8,11 @@ return {
   --   end,
   -- },
   {
+    "vhyrro/luarocks.nvim",
+    priority = 1000,
+    config = true,
+  },
+  {
     "hrsh7th/nvim-cmp",
     event = "InsertEnter",
     opts = {
@@ -37,6 +42,7 @@ return {
       { "<leader>tt", "<cmd>TodoTrouble<CR>", desc = "Trouble Open todos in trouble" },
     },
     config = function()
+      dofile(vim.g.base46_cache .. "trouble")
       require("trouble").setup()
     end,
   },
@@ -59,6 +65,10 @@ return {
   },
   {
     "nvim-tree/nvim-tree.lua",
+    enabled = false,
+  },
+  {
+    "folke/which-key.nvim",
     enabled = false,
   },
   {
